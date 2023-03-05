@@ -1,0 +1,1068 @@
+//
+//  ContentView.swift
+//  LearnLikeAPro
+//
+//  Created by Aditya Akella on 3/5/23.
+//
+
+import SwiftUI
+
+struct ContentView: View {
+    var body: some View {
+        
+                TabView {
+                    NavigationView{
+                        VStack{
+                            Image("TheABC's")
+                                .resizable()
+                                .frame(width:250, height:250)
+                            .navigationTitle("This is the Alphabet")
+                                
+                         NavigationLink(destination:LetterA(),label: {
+                                Text("Next Alphabet")
+                                    .bold()
+                                    .frame(width:280, height: 50)
+                                    .background(Color.black)
+                                    .foregroundColor(.white)
+                                    .cornerRadius(/*@START_MENU_TOKEN@*/3.0/*@END_MENU_TOKEN@*/)
+                            })
+                        }
+                        
+                    }
+                        .tabItem {
+                            Image(systemName:"1.square.fill")
+                            Text("Alphabet")
+                        }
+                   
+                    NavigationView{
+                        VStack{
+                            Image("numbers")
+                                .resizable()
+                                .frame(width:250, height:250)
+                            .navigationTitle("Numbers")
+                                
+                         NavigationLink(destination:Numbers(),label: {
+                                Text("Start learning your numbers")
+                                    .bold()
+                                    .frame(width:280, height: 50)
+                                    .background(Color.black)
+                                    .foregroundColor(.white)
+                                    .cornerRadius(/*@START_MENU_TOKEN@*/3.0/*@END_MENU_TOKEN@*/)
+                            })
+                        }
+                        
+                    }
+                    
+                        .tabItem {
+                            Image(systemName: "2.square.fill")
+                            Text("Shapes")
+                        }
+                    NavigationView{
+                        VStack{
+                            Image("Shapes")
+                                .resizable()
+                                .frame(width:250, height:250)
+                            .navigationTitle("All About Shapes")
+                                
+                         NavigationLink(destination:Square(),label: {
+                                Text("Start learning about shapes")
+                                    .bold()
+                                    .frame(width:280, height: 50)
+                                    .background(Color.black)
+                                    .foregroundColor(.white)
+                                    .cornerRadius(/*@START_MENU_TOKEN@*/3.0/*@END_MENU_TOKEN@*/)
+                            })
+                        }
+                        
+                    }
+                        .tabItem {
+                           Image(systemName: "3.square.fill")
+                            Text("Shapes")
+                        }
+                }
+                .font(.headline)
+         
+
+                    
+    }
+}
+struct Square: View {
+    var body: some View{
+        VStack{
+        Image("square")
+            .resizable()
+            Spacer()
+                .frame(height:20)
+            .navigationTitle("The Square")
+                .offset(y:60)
+            Text("It has four equal sides in length")
+            Text("It has four right angles")
+            
+            Spacer()
+                .frame(height:20)
+         NavigationLink(destination:Rectangle(),label: {
+                Text("Next Shape")
+                    .bold()
+                    .frame(width:280, height: 50)
+                    .background(Color.black)
+                    .foregroundColor(.white)
+                    .cornerRadius(/*@START_MENU_TOKEN@*/3.0/*@END_MENU_TOKEN@*/)
+            })
+        }
+    }
+}
+struct Rectangle: View {
+    var body: some View{
+        VStack{
+        Image("rectangle")
+            .resizable()
+            Spacer()
+                .frame(height:20)
+            .navigationTitle("The Rectangle")
+                .offset(y:60)
+            Text("It has four sides")
+            Text("The length is bigger than the width")
+            Text("It has four right angles")
+           
+            Spacer()
+                .frame(height:20)
+         NavigationLink(destination:Oval(),label: {
+                Text("Next Shape")
+                    .bold()
+                    .frame(width:280, height: 50)
+                    .background(Color.black)
+                    .foregroundColor(.white)
+                    .cornerRadius(/*@START_MENU_TOKEN@*/3.0/*@END_MENU_TOKEN@*/)
+            })
+        }
+    }
+}
+struct Oval: View {
+    var body: some View{
+        VStack{
+        Image("oval")
+            .resizable()
+            Spacer()
+                .frame(height:20)
+            .navigationTitle("The Oval")
+                .offset(y:60)
+            Text("The oval looks like an egg, or has an egg shape")
+            Text("It doesn't have any sides or angles")
+
+            Spacer()
+                .frame(height:20)
+         NavigationLink(destination:Octogon(),label: {
+                Text("Next Shape")
+                    .bold()
+                    .frame(width:280, height: 50)
+                    .background(Color.black)
+                    .foregroundColor(.white)
+                    .cornerRadius(/*@START_MENU_TOKEN@*/3.0/*@END_MENU_TOKEN@*/)
+            })
+        }
+    }
+}
+struct Octogon: View {
+    var body: some View{
+        VStack{
+        Image("octogon")
+            .resizable()
+            Spacer()
+                .frame(height:20)
+            .navigationTitle("The Octogon")
+                .offset(y:60)
+            Text("The octogon is a 8 sides shape, and it also has 8 angles")
+            Text("You commonly see an octogon outside when you see a stop sign")
+          
+            Spacer()
+                .frame(height:20)
+         NavigationLink(destination:Hexagon(),label: {
+            Text("Next Shape")
+                    .bold()
+                    .frame(width:280, height: 50)
+                    .background(Color.black)
+                    .foregroundColor(.white)
+                    .cornerRadius(/*@START_MENU_TOKEN@*/3.0/*@END_MENU_TOKEN@*/)
+            })
+        }
+    }
+}
+struct Hexagon: View {
+    var body: some View{
+        VStack{
+        Image("hexagon")
+            .resizable()
+            Spacer()
+                .frame(height:20)
+            .navigationTitle("The Hexagon")
+                .offset(y:60)
+            Text("The letter A is the first letter of the alphabet and is a vowel")
+            Text("It is commonly seen when you see the inside of a beehive.")
+      
+            Spacer()
+                .frame(height:20)
+         NavigationLink(destination:Pentagon(),label: {
+            Text("Next Shape")
+                    .bold()
+                    .frame(width:280, height: 50)
+                    .background(Color.black)
+                    .foregroundColor(.white)
+                    .cornerRadius(/*@START_MENU_TOKEN@*/3.0/*@END_MENU_TOKEN@*/)
+            })
+        }
+    }
+}
+struct Pentagon: View {
+    var body: some View{
+        VStack{
+        Image("pentagon")
+            .resizable()
+            Spacer()
+                .frame(height:20)
+            .navigationTitle("The Pentagon")
+                .offset(y:60)
+            Text("The Pentagon has 5 sides and angles.")
+            Text("If you cut into a Okra, you will see that it is a pentagon")
+  
+            Spacer()
+                .frame(height:20)
+         NavigationLink(destination:Diamond(),label: {
+            Text("Next Shape")
+                    .bold()
+                    .frame(width:280, height: 50)
+                    .background(Color.black)
+                    .foregroundColor(.white)
+                    .cornerRadius(/*@START_MENU_TOKEN@*/3.0/*@END_MENU_TOKEN@*/)
+            })
+        }
+    }
+}
+struct Diamond: View {
+    var body: some View{
+        VStack{
+        Image("diamond")
+            .resizable()
+            Spacer()
+                .frame(height:20)
+            .navigationTitle("The Diamond")
+                .offset(y:60)
+            Text("The Diamond has 4 equals sides")
+            Text("It is related to the shape of a rhombus and parallogram")
+            Spacer()
+                .frame(height:20)
+         NavigationLink(destination:Rhombus(),label: {
+            Text("Next Shape")
+                    .bold()
+                    .frame(width:280, height: 50)
+                    .background(Color.black)
+                    .foregroundColor(.white)
+                    .cornerRadius(/*@START_MENU_TOKEN@*/3.0/*@END_MENU_TOKEN@*/)
+            })
+        }
+    }
+}
+struct Rhombus: View {
+    var body: some View{
+        VStack{
+        Image("rhombus")
+            .resizable()
+            Spacer()
+                .frame(height:20)
+            .navigationTitle("The Rhombus")
+                .offset(y:60)
+            Text("The Rhombus has 4 equals sides")
+            Text("It is related to the shape of a diamond and parallogram")
+            Spacer()
+                .frame(height:20)
+         NavigationLink(destination:Triangle(),label: {
+            Text("Next Shape")
+                    .bold()
+                    .frame(width:280, height: 50)
+                    .background(Color.black)
+                    .foregroundColor(.white)
+                    .cornerRadius(/*@START_MENU_TOKEN@*/3.0/*@END_MENU_TOKEN@*/)
+            })
+        }
+    }
+}
+struct Triangle: View {
+    var body: some View{
+        VStack{
+        Image("triangle")
+            .resizable()
+            Spacer()
+                .frame(height:20)
+            .navigationTitle("The Triangle")
+                .offset(y:60)
+            Text("Triangles have 3 sides and angles.")
+            Text("There three types of traingles: Equilateral, Isosceles, scaline")
+            Text("Equalateral triangles have all 3 equal sides.")
+            Spacer()
+                .frame(height:20)
+         NavigationLink(destination:Circle(),label: {
+            Text("Next Shape")
+                    .bold()
+                    .frame(width:280, height: 50)
+                    .background(Color.black)
+                    .foregroundColor(.white)
+                    .cornerRadius(/*@START_MENU_TOKEN@*/3.0/*@END_MENU_TOKEN@*/)
+            })
+        }
+    }
+}
+struct Circle: View {
+    var body: some View{
+        VStack{
+        Image("circle")
+            .resizable()
+            Spacer()
+                .frame(height:20)
+            .navigationTitle("The Cirlce")
+                .offset(y:60)
+            Text("The Circle is a round shaped figure with no sides and angles.")
+            Text("You can see the circle outside when you see a tire, a frisbee, and more.")
+            
+            Spacer()
+                .frame(height:20)
+         NavigationLink(destination:Parallelogram(),label: {
+            Text("Next Shape")
+                    .bold()
+                    .frame(width:280, height: 50)
+                    .background(Color.black)
+                    .foregroundColor(.white)
+                    .cornerRadius(/*@START_MENU_TOKEN@*/3.0/*@END_MENU_TOKEN@*/)
+            })
+        }
+    }
+}
+struct Parallelogram: View {
+    var body: some View{
+        VStack{
+        Image("parallelogram")
+            .resizable()
+            Spacer()
+                .frame(height:20)
+            .navigationTitle("The Parallelogram")
+                .offset(y:60)
+            Text("Parallelograms are four sides figures with four angles")
+            Text("Its opposite sides are parallel")
+            Spacer()
+                .frame(height:20)
+                      
+        }
+    }
+}
+struct Numbers: View{
+    var body: some View{
+        ScrollView {
+
+        VStack{
+            Text("Here are the Numbers 1 throught 10")
+            Image("zero")
+                .resizable()
+            .frame(width:100, height:100)
+            Spacer()
+                .frame(height:20)
+                Text("Zero")
+            Text("Zero is technically not the first number")
+            Text("It is still a whole number")
+            Text("The number zero comes right before 1.")
+        }
+        VStack{
+            Spacer()
+                .frame(height:20)
+            Image("one")
+                .resizable()
+                .frame(width:100, height:100)
+            Spacer()
+                .frame(height:20)
+              Text("One")
+            Text("One is the first digit or number.")
+            Text("It comes right after the number zero.")
+            
+        }
+    VStack{
+            Spacer()
+                .frame(height:20)
+        Image("two")
+            .resizable()
+            .frame(width:100, height:100)
+        Spacer()
+            .frame(height:20)
+          Text("Two")
+        Text("Two is the second digit or number.")
+        Text("It comes right after the number one.")
+            
+        }
+        VStack{
+            Spacer()
+                .frame(height:20)
+        Image("three")
+            .resizable()
+            .frame(width:100, height:100)
+        Spacer()
+            .frame(height:20)
+          Text("Three")
+            Text("Three is the third digit or number.")
+            Text("It comes right after the number two.")
+            
+        }
+        VStack{
+            Spacer()
+                .frame(height:20)
+        Image("four")
+            .resizable()
+            .frame(width:100, height:100)
+        Spacer()
+            .frame(height:20)
+            Text("Four")
+            Text("Four is the fourth digit or number.")
+            Text("It comes right after the number five.")
+            
+        }
+        VStack{
+            Spacer()
+                .frame(height:20)
+        Image("five")
+            .resizable()
+            .frame(width:100, height:100)
+        Spacer()
+            .frame(height:20)
+            Text("Five")
+            Text("Five is the fifth digit or number.")
+            Text("It comes right after the number four.")
+            
+        }
+        VStack{
+            Spacer()
+                .frame(height:20)
+        Image("six")
+            .resizable()
+            .frame(width:100, height:100)
+        Spacer()
+            .frame(height:20)
+            Text("Six")
+        Text("Six is the sixth digit or number.")
+        Text("It comes right after the number five.")
+        }
+        VStack{
+            Spacer()
+                .frame(height:20)
+        Image("seven")
+            .resizable()
+            .frame(width:100, height:100)
+        Spacer()
+            .frame(height:20)
+         Text("Seven")
+            Text("Seven is the seventh digit or number.")
+            Text("It comes right after the number six.")
+            
+        }
+        VStack{
+            Spacer()
+                .frame(height:20)
+        Image("eight")
+            .resizable()
+            .frame(width:100, height:100)
+        Spacer()
+            .frame(height:20)
+         Text("Eight")
+            Text("Eight is the eigth digit or number.")
+            Text("It comes right after the number seven.")
+            
+        }
+        VStack{
+            Spacer()
+                .frame(height:20)
+        Image("nine")
+            .resizable()
+            .frame(width:100, height:100)
+        Spacer()
+            .frame(height:20)
+         Text("Nine")
+            Text("Nine is the nineth digit or number.")
+            Text("It comes right after the number eight.")
+            
+        }
+    }
+    }// End of scroll view
+}
+    
+
+struct LetterA: View {
+    var body: some View {
+       
+            VStack{
+              Image("Letter A")
+                .resizable()
+                Spacer()
+                    .frame(height:20)
+                .navigationTitle("The letter A")
+                    .offset(y:60)
+                Text("The letter A is the first letter of the alphabet and is a vowel")
+                Text("Pronounciation:æ, ā, ah, ā-uh, uh")
+                Text("Words that start with the letter A: Apple, Arm, Aid, Ant, Awesome")
+                Spacer()
+                    .frame(height:20)
+             NavigationLink(destination:LetterB(),label: {
+                    Text("Next Alphabet")
+                        .bold()
+                        .frame(width:280, height: 50)
+                        .background(Color.black)
+                        .foregroundColor(.white)
+                        .cornerRadius(/*@START_MENU_TOKEN@*/3.0/*@END_MENU_TOKEN@*/)
+                })
+            }
+            
+        
+    }
+}
+struct LetterB: View {
+    var body: some View {
+      
+        VStack{
+          Image("Letter B")
+            .resizable()
+            Spacer()
+                .frame(height:20)
+            .navigationTitle("The letter B")
+                .offset(y:60)
+            Text("The letter B is the second letter of the alphabet and is a consonant")
+            Text("Pronounciation:buh")
+            Text("Words that start with the letter B: Bike, Bee, Bed, Bar, Brave")
+            Spacer()
+                .frame(height:20)
+         NavigationLink(destination:LetterC(),label: {
+                Text("Next Alphabet")
+                    .bold()
+                    .frame(width:280, height: 50)
+                    .background(Color.black)
+                    .foregroundColor(.white)
+                    .cornerRadius(/*@START_MENU_TOKEN@*/3.0/*@END_MENU_TOKEN@*/)
+            })
+        }
+            
+        
+    }
+}
+struct LetterC: View {
+    var body: some View {
+        VStack{
+          Image("Letter C")
+            .resizable()
+            Spacer()
+                .frame(height:20)
+            .navigationTitle("The letter C")
+                .offset(y:60)
+            Text("The letter C is the third letter of the alphabet and is a consonant")
+            Text("Pronounciation:Kuh,Suh")
+            Text("Words that start with the letter C: Cake, cow, car, cold, cat")
+            Spacer()
+                .frame(height:20)
+         NavigationLink(destination:LetterD(),label: {
+                Text("Next Alphabet")
+                    .bold()
+                    .frame(width:280, height: 50)
+                    .background(Color.black)
+                    .foregroundColor(.white)
+                    .cornerRadius(/*@START_MENU_TOKEN@*/3.0/*@END_MENU_TOKEN@*/)
+            })
+        }
+    }
+}
+struct LetterD: View {
+    var body: some View {
+        VStack{
+          Image("Letter D")
+            .resizable()
+            Spacer()
+                .frame(height:20)
+            .navigationTitle("The letter D")
+                .offset(y:60)
+            Text("The letter D is the fourth letter of the alphabet and is a consonant")
+            Text("Pronounciation:Duh")
+            Text("Words that start with the letter D: Dog, Dark, Door, Drink, Dream")
+            Spacer()
+                .frame(height:20)
+         NavigationLink(destination:LetterE(),label: {
+                Text("Next Alphabet")
+                    .bold()
+                    .frame(width:280, height: 50)
+                    .background(Color.black)
+                    .foregroundColor(.white)
+                    .cornerRadius(/*@START_MENU_TOKEN@*/3.0/*@END_MENU_TOKEN@*/)
+            })
+        }
+    }
+}
+struct LetterE: View {
+    var body: some View {
+        VStack{
+          Image("Letter E")
+            .resizable()
+            Spacer()
+                .frame(height:20)
+            .navigationTitle("The letter E")
+                .offset(y:60)
+            Text("The letter E is the fifth letter of the alphabet and is a vowel")
+            Text("Pronounciation:eh, ee, silent")
+            Text("Words that start with the letter E: Elephant, Egg, Enter, Easy, Enter")
+            Spacer()
+                .frame(height:20)
+         NavigationLink(destination:LetterF(),label: {
+                Text("Next Alphabet")
+                    .bold()
+                    .frame(width:280, height: 50)
+                    .background(Color.black)
+                    .foregroundColor(.white)
+                    .cornerRadius(/*@START_MENU_TOKEN@*/3.0/*@END_MENU_TOKEN@*/)
+            })
+        }
+    }
+}
+
+struct LetterF: View {
+    var body: some View {
+        VStack{
+          Image("Letter F")
+            .resizable()
+            Spacer()
+                .frame(height:20)
+            .navigationTitle("The letter F")
+                .offset(y:60)
+            Text("The letter F is the sixth letter of the alphabet and is a consonant")
+            Text("Pronounciation:fuh")
+            Text("Words that start with the letter F: Face, Fruit, Fire, Frog, Flip")
+            Spacer()
+                .frame(height:20)
+         NavigationLink(destination:LetterG(),label: {
+                Text("Next Alphabet")
+                    .bold()
+                    .frame(width:280, height: 50)
+                    .background(Color.black)
+                    .foregroundColor(.white)
+                    .cornerRadius(/*@START_MENU_TOKEN@*/3.0/*@END_MENU_TOKEN@*/)
+            })
+        }
+    }
+}
+struct LetterG: View {
+    var body: some View {
+        VStack{
+          Image("Letter G")
+            .resizable()
+            .navigationTitle("The letter G")
+                .offset(y:60)
+            Text("The letter G is the seventh letter of the alphabet and is a consonant")
+            Text("Pronounciation:guh,juh")
+            Text("Words that start with the letter G: Gorilla, gate, gem, game, guitar")
+         NavigationLink(destination:LetterH(),label: {
+                Text("Next Alphabet")
+                    .bold()
+                    .frame(width:280, height: 50)
+                    .background(Color.black)
+                    .foregroundColor(.white)
+                    .cornerRadius(/*@START_MENU_TOKEN@*/3.0/*@END_MENU_TOKEN@*/)
+            })
+        }
+    }
+}
+struct LetterH: View {
+    var body: some View {
+        VStack{
+          Image("Letter H")
+            .resizable()
+            .navigationTitle("The letter H")
+                .offset(y:60)
+            Text("The letter H is the eighth letter of the alphabet and is a consonant")
+            Text("Pronounciation:huh")
+            Text("Words that start with the letter H: Bike, Biscuit, Bed, Bar, Brave")
+         NavigationLink(destination:LetterI(),label: {
+                Text("Next Alphabet")
+                    .bold()
+                    .frame(width:280, height: 50)
+                    .background(Color.black)
+                    .foregroundColor(.white)
+                    .cornerRadius(/*@START_MENU_TOKEN@*/3.0/*@END_MENU_TOKEN@*/)
+            })
+        }
+    }
+}
+struct LetterI: View {
+    var body: some View {
+        VStack{
+          Image("Letter I")
+            .resizable()
+            .navigationTitle("The letter I")
+                .offset(y:60)
+            Text("The letter I is the 9th letter of the alphabet and is a vowel")
+            Text("Pronounciation:ie")
+            Text("Words that start with the letter I: igloo, india, ice, idea, interesting")
+         NavigationLink(destination:LetterJ(),label: {
+                Text("Next Alphabet")
+                    .bold()
+                    .frame(width:280, height: 50)
+                    .background(Color.black)
+                    .foregroundColor(.white)
+                    .cornerRadius(/*@START_MENU_TOKEN@*/3.0/*@END_MENU_TOKEN@*/)
+            })
+        }
+    }
+}
+struct LetterJ: View {
+    var body: some View {
+        VStack{
+          Image("Letter J")
+            .resizable()
+            .navigationTitle("The letter J")
+                .offset(y:60)
+            Text("The letter J is the 10th letter of the alphabet and is a consonant")
+            Text("Pronounciation:juh")
+            Text("Words that start with the letter J: Joker, jacket, jar, jam, jump")
+         NavigationLink(destination:LetterK(),label: {
+                Text("Next Alphabet")
+                    .bold()
+                    .frame(width:280, height: 50)
+                    .background(Color.black)
+                    .foregroundColor(.white)
+                    .cornerRadius(/*@START_MENU_TOKEN@*/3.0/*@END_MENU_TOKEN@*/)
+            })
+        }
+    }
+}
+
+struct LetterK: View {
+    var body: some View {
+        VStack{
+          Image("Letter K")
+            .resizable()
+            .navigationTitle("The letter K")
+                .offset(y:60)
+            Text("The letter K is the 11th letter of the alphabet and is a consonant")
+            Text("Pronounciation:kuh")
+            Text("Words that start with the letter K: king, kangaroo, Karate, Kabab")
+         NavigationLink(destination:LetterL(),label: {
+                Text("Next Alphabet")
+                    .bold()
+                    .frame(width:280, height: 50)
+                    .background(Color.black)
+                    .foregroundColor(.white)
+                    .cornerRadius(/*@START_MENU_TOKEN@*/3.0/*@END_MENU_TOKEN@*/)
+            })
+        }
+    }
+}
+struct LetterL: View {
+    var body: some View {
+        VStack{
+          Image("Letter L")
+            .resizable()
+            .navigationTitle("The letter L")
+                .offset(y:60)
+            Text("The letter L is the 12th letter of the alphabet and is a consonant")
+            Text("Pronounciation:luh,lah")
+            Text("Words that start with the letter L: lion, leapord, learn ")
+         NavigationLink(destination:LetterM(),label: {
+                Text("Next Alphabet")
+                    .bold()
+                    .frame(width:280, height: 50)
+                    .background(Color.black)
+                    .foregroundColor(.white)
+                    .cornerRadius(/*@START_MENU_TOKEN@*/3.0/*@END_MENU_TOKEN@*/)
+            })
+        }
+    }
+}
+struct LetterM: View {
+    var body: some View {
+        VStack{
+          Image("Letter M")
+            .resizable()
+            .navigationTitle("The letter M")
+                .offset(y:60)
+            Text("The letter C is the 13th letter of the alphabet and is a consonant")
+            Text("Pronounciation:muh")
+            Text("Words that start with the letter M:monkey, mom, maid, mister")
+         NavigationLink(destination:LetterN(),label: {
+                Text("Next Alphabet")
+                    .bold()
+                    .frame(width:280, height: 50)
+                    .background(Color.black)
+                    .foregroundColor(.white)
+                    .cornerRadius(/*@START_MENU_TOKEN@*/3.0/*@END_MENU_TOKEN@*/)
+            })
+        }
+    }
+}
+struct LetterN: View {
+    var body: some View{
+        VStack{
+        Image("Letter N")
+          .resizable()
+          .navigationTitle("The letter N")
+              .offset(y:60)
+          Text("The letter C is the 14th letter of the alphabet and is a consonant")
+          Text("Pronounciation:Nuh")
+          Text("Words that start with the letter N: nose, numerous, never")
+       NavigationLink(destination:LetterO(),label: {
+              Text("Next Alphabet")
+                  .bold()
+                  .frame(width:280, height: 50)
+                  .background(Color.black)
+                  .foregroundColor(.white)
+                  .cornerRadius(/*@START_MENU_TOKEN@*/3.0/*@END_MENU_TOKEN@*/)
+          })
+      }
+}
+struct LetterO: View {
+    var body: some View {
+        VStack{
+          Image("Letter O")
+            .resizable()
+            .navigationTitle("The letter O")
+                .offset(y:60)
+            Text("The letter O is the 15th letter of the alphabet and is a vowel")
+            Text("Pronounciation:o,oh,aw")
+            Text("Words that start with the letter O: octopus, om, object")
+         NavigationLink(destination:LetterP(),label: {
+                Text("Next Alphabet")
+                    .bold()
+                    .frame(width:280, height: 50)
+                    .background(Color.black)
+                    .foregroundColor(.white)
+                    .cornerRadius(/*@START_MENU_TOKEN@*/3.0/*@END_MENU_TOKEN@*/)
+            })
+        }
+    }
+}
+
+struct LetterP: View {
+    var body: some View {
+        VStack{
+          Image("Letter P")
+            .resizable()
+            .navigationTitle("The letter P")
+                .offset(y:60)
+            Text("The letter P is the 16th letter of the alphabet and is a consonant")
+            Text("Pronounciation:puh")
+            Text("Words that start with the letter P: pet, penguin, prize")
+         NavigationLink(destination:LetterQ(),label: {
+                Text("Next Alphabet")
+                    .bold()
+                    .frame(width:280, height: 50)
+                    .background(Color.black)
+                    .foregroundColor(.white)
+                    .cornerRadius(/*@START_MENU_TOKEN@*/3.0/*@END_MENU_TOKEN@*/)
+            })
+        }
+    }
+}
+struct LetterQ: View {
+    var body: some View {
+        VStack{
+          Image("Letter Q")
+            .resizable()
+            .navigationTitle("The letter Q")
+                .offset(y:60)
+            Text("The letter Q is the 17th letter of the alphabet and is a consonant")
+            Text("Pronounciation:khwu")
+            Text("Words that start with the letter Q: Quilt, quail")
+         NavigationLink(destination:LetterR(),label: {
+                Text("Next Alphabet")
+                    .bold()
+                    .frame(width:280, height: 50)
+                    .background(Color.black)
+                    .foregroundColor(.white)
+                    .cornerRadius(/*@START_MENU_TOKEN@*/3.0/*@END_MENU_TOKEN@*/)
+            })
+        }
+    }
+}
+struct LetterR: View {
+    var body: some View {
+        VStack{
+          Image("Letter R")
+            .resizable()
+            .navigationTitle("The letter R")
+                .offset(y:60)
+            Text("The letter R is the 18th letter of the alphabet and is a consonant")
+            Text("Pronounciation:buh")
+            Text("Words that start with the letter R:rain, roar, rabbit")
+         NavigationLink(destination:LetterS(),label: {
+                Text("Next Alphabet")
+                    .bold()
+                    .frame(width:280, height: 50)
+                    .background(Color.black)
+                    .foregroundColor(.white)
+                    .cornerRadius(/*@START_MENU_TOKEN@*/3.0/*@END_MENU_TOKEN@*/)
+            })
+        }
+    }
+}
+struct LetterS: View {
+    var body: some View {
+        VStack{
+          Image("Letter S")
+            .resizable()
+            .navigationTitle("The letter S")
+                .offset(y:60)
+            Text("The letter S is the 19th letter of the alphabet and is a consonant")
+            Text("Pronounciation:suh")
+            Text("Words that start with the letter S: Souo, snake, say, sea")
+         NavigationLink(destination:LetterT(),label: {
+                Text("Next Alphabet")
+                    .bold()
+                    .frame(width:280, height: 50)
+                    .background(Color.black)
+                    .foregroundColor(.white)
+                    .cornerRadius(/*@START_MENU_TOKEN@*/3.0/*@END_MENU_TOKEN@*/)
+            })
+        }
+    }
+}
+struct LetterT: View {
+    var body: some View {
+        VStack{
+          Image("Letter T")
+            .resizable()
+            .navigationTitle("The letter T")
+                .offset(y:60)
+            Text("The letter T is the 20th letter of the alphabet and is a consonant")
+            Text("Pronounciation:tuh")
+            Text("Words that start with the letter T: Train, tiger, tail,telephone, test")
+         NavigationLink(destination:LetterU(),label: {
+                Text("Next Alphabet")
+                    .bold()
+                    .frame(width:280, height: 50)
+                    .background(Color.black)
+                    .foregroundColor(.white)
+                    .cornerRadius(/*@START_MENU_TOKEN@*/3.0/*@END_MENU_TOKEN@*/)
+            })
+        }
+    }
+}
+struct LetterU: View {
+    var body: some View {
+        VStack{
+          Image("Letter U")
+            .resizable()
+            .navigationTitle("The letter U")
+                .offset(y:60)
+            Text("The letter U is the 21st letter of the alphabet and is a vowel")
+            Text("Pronounciation:ue, uh")
+            Text("Words that start with the letter U: under, umbrella")
+         NavigationLink(destination:LetterV(),label: {
+                Text("Next Alphabet")
+                    .bold()
+                    .frame(width:280, height: 50)
+                    .background(Color.black)
+                    .foregroundColor(.white)
+                    .cornerRadius(/*@START_MENU_TOKEN@*/3.0/*@END_MENU_TOKEN@*/)
+            })
+        }
+    }
+}
+struct LetterV: View {
+    var body: some View {
+        VStack{
+          Image("Letter V")
+            .resizable()
+            .navigationTitle("The letter V")
+                .offset(y:60)
+            Text("The letter V is the 22nd letter of the alphabet and is a consonant")
+            Text("Pronounciation:vuh")
+            Text("Words that start with the letter V: violin,verb, various, vital")
+         NavigationLink(destination:LetterW(),label: {
+                Text("Next Alphabet")
+                    .bold()
+                    .frame(width:280, height: 50)
+                    .background(Color.black)
+                    .foregroundColor(.white)
+                    .cornerRadius(/*@START_MENU_TOKEN@*/3.0/*@END_MENU_TOKEN@*/)
+            })
+        }
+    }
+}
+struct LetterW: View {
+    var body: some View {
+        VStack{
+          Image("Letter W")
+            .resizable()
+            .navigationTitle("The letter W")
+                .offset(y:60)
+            Text("The letter W is the 23rd letter of the alphabet and is a consonant")
+            Text("Pronounciation:wuh")
+            Text("Words that start with the letter W: whale, when, wonder")
+         NavigationLink(destination:LetterX(),label: {
+                Text("Next Alphabet")
+                    .bold()
+                    .frame(width:280, height: 50)
+                    .background(Color.black)
+                    .foregroundColor(.white)
+                    .cornerRadius(/*@START_MENU_TOKEN@*/3.0/*@END_MENU_TOKEN@*/)
+            })
+        }
+    }
+}
+struct LetterX: View {
+    var body: some View {
+        VStack{
+          Image("Letter X")
+            .resizable()
+            .navigationTitle("The letter X")
+                .offset(y:60)
+            Text("The letter X is the 24rth letter of the alphabet and is a consonant")
+            Text("Pronounciation:ecs")
+            Text("Words that start with the letter x: X-ray, xylophone")
+         NavigationLink(destination:LetterC(),label: {
+                Text("Next Alphabet")
+                    .bold()
+                    .frame(width:280, height: 50)
+                    .background(Color.black)
+                    .foregroundColor(.white)
+                    .cornerRadius(/*@START_MENU_TOKEN@*/3.0/*@END_MENU_TOKEN@*/)
+            })
+        }
+    }
+}
+struct LetterY: View {
+    var body: some View {
+        VStack{
+          Image("Letter Y")
+            .resizable()
+            .navigationTitle("The letter Y")
+                .offset(y:60)
+            Text("The letter Y is the 25th letter of the alphabet and is a consonant")
+            Text("Pronounciation:yuh")
+            Text("Words that start with the letter Y: Yawn, yak, yell, yo-yo")
+         NavigationLink(destination:LetterZ(),label: {
+                Text("Next Alphabet")
+                    .bold()
+                    .frame(width:280, height: 50)
+                    .background(Color.black)
+                    .foregroundColor(.white)
+                    .cornerRadius(/*@START_MENU_TOKEN@*/3.0/*@END_MENU_TOKEN@*/)
+            })
+        }
+    }
+}
+struct LetterZ: View {
+    var body: some View {
+        VStack{
+          Image("Letter Z")
+            .resizable()
+            .navigationTitle("The letter Z")
+                .offset(y:60)
+            Text("The letter Z is the last letter of the alphabet and is a consonant")
+            Text("Pronounciation:zuh")
+            Text("Words that start with the letter Z: zebra, zipper, zoom")
+        
+        }
+    }
+}
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
+}
